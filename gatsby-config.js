@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.API_LINK || 'http://localhost:1337',
+        apiURL: 'https://pch-productions-cms.herokuapp.com' || 'http://localhost:1337',
         queryLimit: 1000,
         contentTypes: [
           'photo',
