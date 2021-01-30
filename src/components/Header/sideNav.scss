@@ -1,0 +1,246 @@
+@import '../../styles/variables.scss';
+
+.navigation-outer {
+    position: fixed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    margin-top: 15vh;
+    z-index: 3;
+
+    .navigation {
+        height: inherit;
+        margin-left: 50px;
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        box-shadow: $shadow;
+
+        .content {
+            padding: 1.5rem;
+            background-color: $neutral-7;
+            overflow-y: scroll;
+
+            a {
+                display: block;
+                margin-bottom: 1.5vh;
+                color: $primary-6;
+                text-decoration: none;
+            }
+
+            a:last-child {
+                margin-bottom: 0;
+            }
+
+            div {
+                width: 16rem;
+                height: 6rem;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                transition: ease .3s;
+
+                h3 {
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+
+            div:hover {
+                color: $neutral-1;
+            }
+
+            .home {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/home.jpg); 
+                background-size: cover;
+                background-position: 50% 60%;
+            }
+
+            .home:hover {
+                background: url(../../images/home.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .photography {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/photography.jpg); 
+                background-size: cover;
+                background-position: 50% 60%;
+            }
+
+            .photography:hover {
+                background: url(../../images/photography.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .music {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/music.jpg); 
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .music:hover {
+                background: url(../../images/music.jpg);
+                background-size: cover;
+                background-position: 50% 40%;
+            }
+
+            .videos {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/videos.jpg); 
+                background-size: cover;
+                background-position: 50% 60%;
+            }
+
+            .videos:hover {
+                background: url(../../images/videos.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .about {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/about.jpg); 
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .about:hover {
+                background: url(../../images/about.jpg);
+                background-size: cover;
+                background-position: 50% 40%;
+            }
+
+            .contact {
+                background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+                url(../../images/contact.jpg); 
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .contact:hover {
+                background: url(../../images/contact.jpg);
+                background-size: cover;
+                background-position: 50% 40%;
+            }
+        }
+
+        .content::-webkit-scrollbar {
+            width: 1rem;
+        }
+        
+        .content::-webkit-scrollbar-button {
+            display: none;
+        }
+        
+        .content::-webkit-scrollbar-thumb {
+            background-color: $primary-5;
+            border-radius: 10px;
+        }
+        
+        .content::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px #111; 
+            border-radius: 10px;
+            background: $neutral-5;
+        }
+
+        .effect {
+            background: $neutral-9;
+            z-index: 3;
+            box-shadow: -1px 0 5px 1px #111;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                font-size: 1.5rem;
+                color: $primary-5;
+                transition: ease .3s;
+                cursor: pointer;
+            }
+
+            svg:hover{
+                transform: scale(1.1);
+                color: $neutral-1;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation-outer {
+        .navigation {
+            margin-left: 40px;
+
+            .content {
+                padding: 1rem;
+
+                div {
+                    width: 12rem;
+                    height: 5em;
+
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .effect {
+                width: 40px;
+                
+                svg {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .navigation-outer {
+        .navigation {
+            .content {
+                div {
+                    width: 10rem;
+
+                    h3 {
+                        margin-bottom: .5rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .navigation-outer {
+        .navigation {
+            margin-left: 65px;
+
+            .content {
+                div {
+                    width: 20rem;
+                    height: 8rem;
+
+                    h3 {
+                        margin-bottom: 1.5rem;
+                        margin-right: 1.5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

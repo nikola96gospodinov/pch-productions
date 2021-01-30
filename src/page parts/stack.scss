@@ -1,0 +1,25 @@
+@import '../styles/variables.scss';
+
+.stack {
+    padding-top: 0;
+
+    .slick-slider {
+        margin-top: 3rem;
+    }
+
+    .slick-slide {
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .slick-track {
+        margin-bottom: 2rem;
+    }
+}

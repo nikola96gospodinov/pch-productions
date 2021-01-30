@@ -1,0 +1,85 @@
+@import '../styles/variables.scss';
+
+.gallery {
+    .image-container {
+
+        img {
+            width: 100%;
+            margin-bottom: -.3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        div {
+            background: linear-gradient(to bottom, $neutral-10, rgba($neutral-10, .6), $neutral-10),
+            linear-gradient(45deg, $neutral-10 25%, transparent 25%),
+            linear-gradient(135deg, $neutral-9 50%, transparent 50%),
+            linear-gradient(45deg, $neutral-8 75%, transparent 75%),
+            linear-gradient($neutral-7, $neutral-7);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1.2rem;
+                color: $neutral-1;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            svg {
+                background: $neutral-1;
+                padding: .5rem;
+                border-radius: 50%;
+                color: $neutral-10;
+                border: 2px solid $neutral-1
+            }
+
+            svg:hover {
+                color: $neutral-1;
+                background: transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        .image-container {
+            div {
+                p {
+                    font-size: 1rem;
+                }
+
+                svg {
+                    padding: .4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .gallery {
+        .double-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        .image-container {
+            div {
+                padding: .5rem;
+
+                svg {
+                    padding: .25rem!important;
+                }
+            }
+        }
+    }
+}

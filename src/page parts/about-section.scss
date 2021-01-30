@@ -1,0 +1,68 @@
+@import '../styles/variables.scss';
+
+.about-section {
+    padding-top: 8rem;
+
+    .about-pic {
+        background: $primary-4;
+        width: 95%;
+
+        div {
+            height: 100%;
+            transform: translate(1.25rem, -1.25rem);
+            box-shadow: $shadow;
+        }
+    }
+
+    .about-text {
+        padding: 3rem 0 4rem 2rem;
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            line-height: 1.4;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-section {
+        .about-text {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .about-section {
+        .about-pic {
+            height: 30vh;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        .about-pic {
+            div {
+                transform: translate(1rem, -1rem);
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .about-section {
+        .about-pic {
+            div {
+                transform: translate(2rem, -2rem);
+            }
+        }
+
+        .double-grid {
+            align-items: center;
+        }
+    }
+}

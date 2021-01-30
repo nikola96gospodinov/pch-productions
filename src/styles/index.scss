@@ -1,0 +1,245 @@
+@import './variables.scss';
+
+.boxes {
+    background: linear-gradient(to bottom, $neutral-1, rgba($neutral-1, .7), $neutral-1),
+                linear-gradient(45deg, $primary-2 25%, transparent 25%),
+                linear-gradient(135deg, $primary-1 50%, transparent 50%),
+                linear-gradient(45deg, $secondary-1 75%, transparent 75%),
+                linear-gradient($secondary-2, $secondary-2);
+
+    .box {
+        margin-top: 5rem;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-bottom: 8px solid $primary-5;
+        border-radius: 0 0 5px 5px;
+        text-decoration: none;
+        box-shadow: $shadow;
+
+        div {
+            width: 80%;
+            height: 110%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            transition: .3s ease;
+
+            h3 {
+                font-size: 1.5rem;
+                color: $neutral-1;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        div:hover {
+            width: 100%;
+        }
+    }
+
+    .box-1 {
+        background: linear-gradient(to bottom, transparent, rgba(black,.85)),
+                    url(../images/photography.jpg);
+        background-size: cover;
+        background-position: center;
+
+        div {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,.6)),
+                        url(../images/photography.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .box-2 {
+        background: linear-gradient(to bottom, transparent, rgba(black,.85)),
+                    url(../images/videos.jpg);
+        background-size: cover;
+        background-position: center;
+
+        div {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,.6)),
+                        url(../images/videos.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .box-3 {
+        background: linear-gradient(to bottom, transparent, rgba(black,.85)),
+                    url(../images/music.jpg);
+        background-size: cover;
+        background-position: center;
+
+        div {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,.6)),
+                        url(../images/music.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+.featured-photos {
+    padding: 0;
+
+    .double-grid {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .big-image {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: $shadow;
+        transition: .3s ease;
+    }
+
+    .big-image-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transition: .3s ease;
+        margin-top: -80vh;
+        z-index: 1;
+        transition: .3s ease;
+        position: relative;
+        opacity: 0;
+    }
+
+    .big-image-overlay:hover {
+        opacity: 1;
+    }
+
+    .small-image-container {
+        margin-bottom: 2rem;
+    }
+
+    .small-image {
+        width: 100%;
+        box-shadow: $shadow;
+        height: calc(40vh - 1rem);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transition: .3s ease;
+        color: transparent;
+    }
+
+    .small-image-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+        height: calc(40vh - 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transition: .3s ease;
+        margin-top: calc(-40vh + 1rem);
+        z-index: 1;
+        transition: .3s ease;
+        position: relative;
+        opacity: 0;
+    }
+
+    .small-image-overlay:hover {
+        opacity: 1;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 2rem;
+        color: $neutral-1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .boxes {
+        .box {
+            height: 200px;
+            margin-top: 3rem;
+
+            div {
+                h3 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .featured-photos {
+        h4 {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .boxes {
+        .box {
+            height: 300px;
+        }
+    }
+
+    .featured-photos {
+        .big-image {
+            height: 40vh;
+            margin-bottom: 2rem;
+        }
+
+        .big-image-overlay {
+            height: 40vh;
+            margin-top: calc(-40vh - 2rem);
+            margin-bottom: 2rem;
+        }
+
+        .two-one-grid > div {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .boxes {
+        .box {
+            height: 200px;
+        }
+    }
+
+    .featured-photos {
+        .double-grid {
+            margin-top: 2rem;
+        }
+
+        h4 {
+            padding: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .boxes {
+        .box {
+            height: 300px;
+
+            div {
+                h3 {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+
+    .featured-photos {
+        h4 {
+            padding: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
