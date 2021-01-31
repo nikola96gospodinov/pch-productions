@@ -119,10 +119,9 @@ const ContactForm = () => {
                         name="form-name" 
                         value="contact"
                     />
-                    <div className="center-container">
-                        <h2 className="sub-heading">Send me an email</h2>
-                        <hr className="divider"/>
-                    </div>
+                    <h2 className="sub-heading">Send me an email</h2>
+                    <hr className="divider"/>
+                    <br/>
                     <br/>
                     <div className="icon-field">
                         <FontAwesomeIcon icon={['fas', 'user']}/>

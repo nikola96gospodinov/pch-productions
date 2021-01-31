@@ -65,10 +65,8 @@ const Music = ({ data }) => {
     
             <div id="music-boxes" className="music-boxes outer-container">
                 <div className="container">
-                    <div className="center-container">
-                        <h2 className="sub-heading">Top Tracks</h2>
-                        <hr className="divider"/>
-                    </div>
+                    <h2 className="sub-heading">Top Tracks</h2>
+                    <hr className="divider"/>
                     {
                         songs.map(song => {
                             return (

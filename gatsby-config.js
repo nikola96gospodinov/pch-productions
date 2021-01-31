@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: '',
-        sitemap: '',
+        host: 'https://pch-productions.netlify.app',
+        sitemap: 'https://pch-productions.netlify.app/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
@@ -29,8 +29,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1F2933`,
+        theme_color: `#1F2933`,
         display: `minimal-ui`,
         icon: `src/images/logo-small.png`, // This path is relative to the root of the site.
       },

@@ -43,10 +43,8 @@ const Stack = () => {
     return (
         <div className="outer-container stack">
             <div className="container">
-                <div className="center-container">
-                    <h2 className="sub-heading">Equipment and Technologies used</h2>
-                    <hr className="divider"/>
-                </div>
+                <h2 className="sub-heading">Equipment and Technologies used</h2>
+                <hr className="divider"/>
                 <Slider {...settings}>
                     <div>
                         <img src={Photoshop} alt="Photoshop logo"/>

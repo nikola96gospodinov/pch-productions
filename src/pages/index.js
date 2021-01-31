@@ -96,10 +96,8 @@ const IndexPage = ({ data }) => (
 
     <div id="boxes" className="outer-container boxes">
       <div className="container">
-        <div className="center-container">
-          <h2 className="sub-heading">What I do</h2>
-          <hr className="divider"/>
-        </div>
+        <h2 className="sub-heading">What I do</h2>
+        <hr className="divider"/>
         <div className="triple-grid">
           <Link to="/photos" className="box box-1">
             <div>
@@ -122,10 +120,8 @@ const IndexPage = ({ data }) => (
 
     <div className="outer-container featured-photos">
       <div className="container">
-        <div className="center-container">
-          <h2 className="sub-heading">Featured Photos</h2>
-          <hr className="divider"/>
-        </div>
+        <h2 className="sub-heading">Featured Photos</h2>
+        <hr className="divider"/>
         <div className="double-grid">
           <div>
             <Img className="big-image" fluid={data.allStrapiHome.nodes[0].FeaturePhoto1.childImageSharp.fluid}/>

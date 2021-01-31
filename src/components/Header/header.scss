@@ -9,11 +9,12 @@ header {
         height: 100%;
         z-index: 2;
         position: relative;
-        height: 15vh;
-        margin-bottom: -15vh;
+        height: 12.5vh;
+        margin-bottom: -12.5vh;
+        
 
         img {
-            width: 175px;
+            width: 150px;
         }
     }
 
@@ -86,7 +87,7 @@ header {
     header {
         .container {
             img {
-                width: 150px;
+                width: 125px;
             }
         }
     }
@@ -132,7 +133,7 @@ header {
     header {
         .container {
             img {
-                width: 250px;
+                width: 200px;
             }
         }
 
